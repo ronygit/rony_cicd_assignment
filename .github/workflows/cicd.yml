@@ -50,3 +50,18 @@ jobs:
           echo ""
           echo "===== test-report====="
           cat ~/ostad/test_report.txt
+
+      - name: Deploy latest code
+          run: |
+            cd /home/ubuntu/node-express-app
+
+            git pull origin main
+
+            npm install
+
+            pm2 restart node-app
+
+            pm2 save
+
+            pm2 status          
+
