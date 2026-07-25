@@ -52,16 +52,15 @@ jobs:
           cat ~/ostad/test_report.txt
 
       - name: Deploy latest code
-          run: |
-            cd /home/ubuntu/node-express-app
+        run: |
+          cd /home/ubuntu/rony_cicd_assignment
 
-            git pull origin main
+          git pull origin main
 
-            npm install
+          npm install
 
-            pm2 restart node-app
+          pm2 restart node-app
 
-            pm2 save
+          pm2 save
 
-            pm2 status          
-
+          pm2 status
