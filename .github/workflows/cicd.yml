@@ -21,7 +21,7 @@ jobs:
 
       - name: Run tests and  save output
         run: |
-          npm run check &> test_report.txt
+          npm run check > test_report.txt
 
       - name: Upload test report
         uses: actions/upload-artifact@v7
