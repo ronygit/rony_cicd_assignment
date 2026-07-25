@@ -59,7 +59,7 @@ jobs:
 
           npm install
 
-          pm2 restart node-app
+          pm2 restart node-app:3000
 
           pm2 save
 
