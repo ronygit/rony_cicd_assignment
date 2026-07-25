@@ -49,4 +49,4 @@ jobs:
           ls -l ~/ostad
           echo ""
           echo "===== test-report====="
-          cat ~/ostad/test-report
+          cat ~/ostad/test_report.txt
