@@ -48,5 +48,5 @@ jobs:
           echo "Files in ~/ostad:"
           ls -l ~/ostad
           echo ""
-          echo "===== test-report.txt ====="
-          cat ~/ostad/test-report.txt
+          echo "===== test-report====="
+          cat ~/ostad/test-report
