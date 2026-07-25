@@ -34,5 +34,19 @@ jobs:
     needs: test
 
     steps:
-      - name: Deploy application
-        run: echo "Deploying application..."
+      - name: Create deployment directory
+        run: mkdir -p ~/ostad
+
+      - name: Download artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: test-report
+          path: ~/ostad
+
+      - name: Display artifact
+        run: |
+          echo "Files in ~/ostad:"
+          ls -l ~/ostad
+          echo ""
+          echo "===== test-report.txt ====="
+          cat ~/ostad/test-report.txt
